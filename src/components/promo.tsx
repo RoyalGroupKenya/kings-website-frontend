@@ -3,12 +3,8 @@
 import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Clock, Gift, Star, ArrowRight, Check, Award, Shield, Sparkles } from "lucide-react"
+import { Gift, Star, ArrowRight, Check, Award, Shield, Sparkles } from "lucide-react"
 import { toast } from "react-toastify"
-import Image from "next/image"
-const imageLoader = ({ src, width, quality }) => {
-  return `${src}?w=${width}&q=${quality || 75}`
-}
 export default function LuxuryPromoBanner({
   onSubmit,
 }: { onSubmit?: (email: string, phone: string, name: string) => void }) {
@@ -75,10 +71,6 @@ export default function LuxuryPromoBanner({
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Left column - Content */}
           <div className="flex flex-col justify-center space-y-6">
-            {/* Logo */}
-            <div className="flex items-center space-x-4">
-              <Image loader={imageLoader} src="/lts.png" alt="Kings Developers Lotus" width={200} height={80} className="object-contain" />
-            </div>
 
             {/* Premium Badge */}
             <div className="flex items-center space-x-3">
@@ -102,13 +94,11 @@ export default function LuxuryPromoBanner({
             {/* Main Headline */}
             <div className="space-y-4">
               <h2 className="font-serif text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
-                Elevate Your
-                <span className="block text-gold-300">Living Experience</span>
+                Build Your Future with Kings Developers
               </h2>
 
               <p className="max-w-xl text-lg text-gold-50/90 leading-relaxed">
-                Be among the first to secure your dream property in our newest prestigious development. Early
-                registrants receive exclusive benefits and priority selection in Kenya's most coveted locations.
+                Premium developments. Prime locations. Limited availability. Secure your spot today before the next phase sells out.
               </p>
             </div>
 
@@ -149,7 +139,7 @@ export default function LuxuryPromoBanner({
                   <h3 className="text-2xl font-serif font-bold text-white">Exclusive Access</h3>
                 </div>
                 <p className="text-gold-100/90">
-                  Register now to secure your priority position and receive exclusive launch benefits
+                  Complete the form below to get exclusive updates, pricing details, and priority access to upcoming releases from Kings Developers.
                 </p>
               </div>
 
@@ -215,7 +205,7 @@ export default function LuxuryPromoBanner({
                     </span>
                   ) : (
                     <span className="flex items-center justify-center">
-                      Secure My Priority Access
+                      Get Priority Access Now
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </span>
                   )}
@@ -236,28 +226,7 @@ export default function LuxuryPromoBanner({
                   </p>
                 </div>
 
-                {/* Benefits List */}
-                <div className="bg-gradient-to-r from-gold-500/10 to-gold-400/10 rounded-lg p-4 border border-gold-400/20">
-                  <h4 className="font-semibold text-gold-200 mb-2 text-sm">Your Exclusive Benefits:</h4>
-                  <ul className="space-y-1 text-xs text-gold-100/80">
-                    <li className="flex items-center space-x-2">
-                      <div className="h-1 w-1 rounded-full bg-gold-400"></div>
-                      <span>Priority property selection</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <div className="h-1 w-1 rounded-full bg-gold-400"></div>
-                      <span>Exclusive early bird pricing</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <div className="h-1 w-1 rounded-full bg-gold-400"></div>
-                      <span>Personal investment consultation</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <div className="h-1 w-1 rounded-full bg-gold-400"></div>
-                      <span>VIP launch event invitation</span>
-                    </li>
-                  </ul>
-                </div>
+
               </div>
             </div>
           </div>

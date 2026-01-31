@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Gift, Star, ArrowRight, Check, Award, Shield, Sparkles } from "lucide-react"
+import { Gift, ArrowRight, Check, Shield, Sparkles } from "lucide-react"
 import { toast } from "react-toastify"
 export default function LuxuryPromoBanner({
   onSubmit,
@@ -72,24 +72,7 @@ export default function LuxuryPromoBanner({
           {/* Left column - Content */}
           <div className="flex flex-col justify-center space-y-6">
 
-            {/* Premium Badge */}
-            <div className="flex items-center space-x-3">
-              <div className="rounded-full bg-gradient-to-br from-gold-400 to-gold-500 p-2">
-                <Award className="h-5 w-5 text-white" />
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-sm font-medium uppercase tracking-wider text-gold-100">
-                  Exclusive Pre-Launch Collection
-                </span>
-                <div className="flex items-center space-x-1">
-                  <Star className="h-4 w-4 text-gold-300 fill-current" />
-                  <Star className="h-4 w-4 text-gold-300 fill-current" />
-                  <Star className="h-4 w-4 text-gold-300 fill-current" />
-                  <Star className="h-4 w-4 text-gold-300 fill-current" />
-                  <Star className="h-4 w-4 text-gold-300 fill-current" />
-                </div>
-              </div>
-            </div>
+
 
             {/* Main Headline */}
             <div className="space-y-4">
